@@ -1,0 +1,42 @@
+Problem No: 2 (link: https://leetcode.com/problems/add-two-numbers/description/)
+Problem Type: Medium
+Language : JAVA
+
+Problem Statement:
+ 			You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single 			digit. Add the two numbers and return the sum as a linked list.
+
+
+Example 1:
+Input: l1 = [2,4,3], l2 = [5,6,4]
+Output: [7,0,8]
+Explanation: 342 + 465 = 807.
+
+
+-> I am solving this Problem Statement using Recursion.
+->Time Complexity : 𝑂(𝑛)
+->Space Complexity : 𝑂(1)
+
+
+Algorithm To Solve :
+1.Initialize a Dummy Node:
+ ->Create a dummy node dummy to act as the starting point of the result 
+ list. 
+ ->Initialize a pointer p1 to point to dummy.
+ ->Initialize a variable carry = 0 to keep track of the carry-over during 
+ addition.
+2.Iterate through the Linked Lists:
+ ->Use a loop to traverse both linked lists until both are fully processed 
+ and there is no carry-over left.
+ ->If l1 is not null, add its value to carry and move to the next node in l1.
+ ->If l2 is not null, add its value to carry and move to the next node in l2.
+3.Create a New Node for the Current Sum:
+ ->Calculate the value of the current node as carry % 10 and create a new 
+ node with this value.
+ ->Set this new node as the next node of p1.
+ ->Update carry by dividing it by 10 to handle carry-over for the next 
+ iteration.
+ ->Move the pointer p1 to the next node.
+4.Return the Result:
+ ->After exiting the loop, 'dummy.next' will point to the head of the
+ resulting linked list. 
+ ->Return 'dummy.next'.
