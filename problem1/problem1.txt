@@ -1,0 +1,31 @@
+Problem No: 1 (link: https://leetcode.com/problems/two-sum/description/)
+Problem Type: Easy
+Language : JAVA
+
+Problem Statement:
+ 		Given an array of integers (nums) and an integer (target), return indices of the two numbers such that they add up to 			target.
+
+Example :
+Input: nums = [2,7,11,15], target = 9
+Output: [0,1]
+Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
+
+
+To solve this problem we have 3 Methods:
+ Methods            Complexity
+1.Brute Force       O(n^2)
+2.Using Sorting     O(n* log n)
+3.Hashing           O(n)
+
+-> I am solving this Problem Statement using Hashing.
+
+Algorithm To Solve :
+-> Initialize a hash-table that will store the index and the element.
+-> Start to traverse the array Using for loop.
+-> For each element in the array use the a formula to find the 
+ complementing number.
+ Formula:- Second_Number = Target_Value - First_Number
+-> Look up the complementing number in the hash table. If found, return 
+ the 2 indices.
+-> Else, add the element along with its index to the hash table and proceed 
+ with the other elements.
